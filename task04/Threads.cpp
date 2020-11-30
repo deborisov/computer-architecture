@@ -99,7 +99,7 @@ void write_output(double** const& inv_matrix, size_t n, std::string path_to_writ
 	std::fstream out(path_to_write, std::ios::out);
 	if (out.is_open()) {
 		if (invertable) {
-			out << std::fixed << std::setprecision(2);
+			out << std::fixed << std::setprecision(6);
 			for (size_t i = 0; i < n; ++i) {
 				for (int j = 0; j < n; ++j) {
 					out << inv_matrix[i][j] << " ";
